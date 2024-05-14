@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .barang{
+    background-color: rgba(50, 50, 50, 0.362);
+    color: white;
+    padding: 20px;
+    max-width: 300px;
+    text-align: center; /* Mengatur teks ramalan menjadi rata kiri */
+    position: relative;
+    z-index: 1;
+    left: 30px;
+    margin-top: 18%;
+    margin-left: 38%;
+    
+
+  }
+</style>
+<body bgcolor="#08142c">
+    <div class="barang">
+    <script>
+        var nama_barang = prompt("Masukkan nama barang: ");
+        document.write("<h2>Xion Market</h2>");
+        document.write("<p>♉︎</p> ");
+        document.write("Nama Barang: " + nama_barang + "<br>");
+
+        var harga_barang = parseFloat(prompt("Masukkan harga barang: "));
+        document.write("Harga Barang: " + harga_barang + "<br>");
+
+        var jumlah_barang = parseInt(prompt("Masukkan jumlah barang: "));
+        document.write("Jumlah Barang: " + jumlah_barang + "<br>");
+
+        // Hitung total harga tanpa diskon
+        var total_harga = harga_barang * jumlah_barang;
+        var diskon = 0;
+
+        // Hitung diskon jika jumlah barang >= 3
+        if (jumlah_barang >= 3) {
+            diskon = 0.3 * harga_barang * jumlah_barang; 
+        }
+
+        // Total Yang Harus di bayar setelah di diskon
+        var total_bayar = total_harga - diskon;
+
+        document.write("Diskon: " + diskon + "<br>");
+        document.write("Total Bayar: " + total_bayar + "<br>");
+    </script>
+    </div>
+</body>
+</html>
